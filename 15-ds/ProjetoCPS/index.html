@@ -14,19 +14,110 @@
             margin-left: 120px
         }
 
+        /* Slideshow container */
+        * {box-sizing:border-box}
+
+
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+          display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          margin-top: -22px;
+          padding: 16px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+          background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Caption text */
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+          background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+          from {opacity: .4}
+          to {opacity: 1}
+        }
+      
+        .w3-container {
+            max-width: 800px;
+            margin: auto;
+          }
+      
+          .docente-slide {
+            display: none;
+          }
         .w3-row-padding img {
             margin-bottom: 12px
         }
-
-        /* Definimos que a sidebar terá uma largura de 120px e cor a cord de fundo #222 */
-
         .w3-sidebar {
             width: 120px;
             background: #222;
         }
-
-        /*Define Fonte para todas as tags listadas abaixo*/
-
         body,
         h1,
         h2,
@@ -39,18 +130,13 @@
 
         h4{
           font-weight: bolder;
-          background-color: rgb(0, 195, 255);
+        
         }
 
         @media only screen and (max-width: 600px) {
             #main {
                 margin-left: 0
             }
-        }
-
-        img{
-          width: 50%;
-          height: 50%;
         }
     </style>
 
@@ -83,7 +169,6 @@
         <i class="fa fa-users w3-xxlarge"></i>
         <p>DOCENTES</p>
       </a>
-      <!-- Docentes -->
       <!-- Mercado de Trabalho -->
       <a href="#mercado"
         class="w3-bar-item w3-button w3-padding-large w3-hover-black w3-hover-text-cyan w3-text-white">
@@ -101,6 +186,12 @@
         class="w3-bar-item w3-button w3-padding-large w3-hover-black w3-hover-text-cyan w3-text-white">
         <i class="fa fa-envelope w3-xxlarge"></i>
         <p>CONTATO</p>
+      </a>
+      <!-- Galeria -->
+      <a href="#galeria"
+        class="w3-bar-item w3-button w3-padding-large w3-hover-black w3-hover-text-cyan w3-text-white">
+        <i class="fa fa-image w3-xxlarge"></i>
+        <p>Galeria</p>
       </a>
     </nav>
     <!--SideBar-->
@@ -240,47 +331,74 @@
       </div>
       <!-- Grade Curricular -->
 
-   <!-- Docentes -->
-<section id="docentes">
-  <div class="w3-container w3-padding-64">
-    <h2 class="w3-text-light-grey">Docentes</h2>
-    <div class="w3-row-padding w3-margin-top">
-      <div class="w3-third">
-        <div class="w3-card w3-white w3-display-container">
-          <img src="./IMG/pexels-photo-8617942.webp" alt="Foto Docente 1" style="width:100%" class="w3-opacity w3-hover-opacity-off">
-          <div class="w3-container">
-            <h4>Prof. Mario Silveira</h4>
-            <p><strong>Formação:</strong> Bacharelado em Engenharia de Software</p>
-            <p><strong>Atuação Profissional:</strong> Experiência em desenvolvimento web e gerenciamento de projetos.</p>
-          </div>
-        </div>
-      </div>
-      <div class="w3-third">
-        <div class="w3-card w3-white w3-display-container">
-          <img src="./IMG/pexels-photo-5212361.jpeg" alt="Foto Docente 2" style="width:100%" class="w3-opacity w3-hover-opacity-off">
-          <div class="w3-container">
-            <h4>Prof. Julio Rondon</h4>
-            <p><strong>Formação:</strong> Mestrado em Ciência da Computação</p>
-            <p><strong>Atuação Profissional:</strong> Especialista em inteligência artificial e aprendizado de máquina.</p>
-          </div>
-        </div>
-      </div>
-      <div class="w3-third">
-        <div class="w3-card w3-white w3-display-container">
-          <img src="./IMG/pexels-photo-5212317.webp" alt="Foto Docente 3" style="width:100%" class="w3-opacity w3-hover-opacity-off">
-          <div class="w3-container">
-            <h4>Prof. Dra. Camila Marquesine</h4>
-            <p><strong>Formação:</strong> Doutorado em Design Interativo</p>
-            <p><strong>Atuação Profissional:</strong> Pesquisador na área de experiência do usuário e design de interfaces.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Docentes -->
+      <!-- Docentes -->
+      <section id="docentes">
+        <!-- Slideshow container docentes -->
+        <div class="slideshow-container">
+          <!-- Docente 1 -->
 
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img
+              src="./IMG/pexels-photo-8617942.webp"
+              alt="Foto Docente 1" style="width:30%">
+            <div class="w3-container">
+              <h4 style="color: #00FFFF">Prof. Mario Silveira</h4>
+              <p style="color: #00FFFF"><strong>Formação:</strong></p><p>
+                Bacharelado em Engenharia de
+                Software</p>
+              <p style="color: #00FFFF"><strong>Atuação Profissional:</strong></p><p>
+                Experiência em
+                desenvolvimento web e gerenciamento de projetos.</p>
+            </div>
+          </div>
 
+          <!-- Docente 2 -->
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img
+              src="./IMG/pexels-photo-5212361.jpeg"
+              alt="Foto Docente 2" style="width:30%">
+            <div class="w3-container">
+              <h4 style="color: #00FFFF">Prof. Julio Rondon</h4>
+              <p style="color: #00FFFF"><strong>Formação:</strong></p><p>
+                Mestrado em Ciência da Computação</p>
+              <p style="color: #00FFFF"><strong>Atuação Profissional:</strong></p>
+              <p>Especialista em
+                inteligência artificial e aprendizado de máquina.</p>
+            </div>
+          </div>
+
+          <!-- Docente 3 -->
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img
+              src="./IMG/pexels-photo-5212317.webp"
+              alt="Foto Docente 1" style="width:30%">
+            <div class="w3-container">
+              <h4 style="color: #00FFFF">Prof. Dra. Camila Marquesine</h4>
+              <p style="color:#00FFFF"><strong>Formação:</strong></p>
+              <p>Doutorado em Design
+                Interativo</p>
+              <p style="color:#00FFFF"><strong>Atuação Profissional:</strong></p>
+              <p> Pesquisador na área de
+                experiência do usuário e design de interfaces.</p>
+            </div>
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="w3-cyan prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="w3-cyan next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </section>
       <!-- Mercado de Trabalho -->
       <div class="w3-padding-64 w3-content w3-" id="mercado">
         <h2 class="w3-text-cyan">Mercado de Trabalho</h2>
@@ -430,8 +548,55 @@
       </div>
       <!-- Contato -->
 
+      <!--Galeria -->
+      <div class="w3-padding-64 w3-content" id="galeria">
+        <h1>Galeria</h1>
+        <img src="./IMG/pexels-photo-5212317.webp" alt="Logo CPS GEEAD SP" class="w3-image"
+          width="50%">
+        <br>
+        <img src="./IMG_VcComando2/html5.png" alt="Desenvolvimento de Sistemas"
+          class="w3-image" width="90%">
+          <img src="IMG/logoCab.png" alt="Logo CPS GEEAD SP" class="w3-image"
+          width="50%">
+        <br>
+        <img src="./IMG/pexels-photo-8617942.webp" alt="Logo CPS GEEAD SP" class="w3-image"
+          width="50%">
+        <br>
+      </div>
+      <!--Galeria -->
+
     </div>
   </body>
+  <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+  </script>
   <footer class="w3-content w3-padding-64 w3-text-cyan w3-xlarge w3-center">
     <a href="http://geead.cps.sp.gov.br/" target="_blank">
       <i class="fa fa-facebook-official w3-hover-opacity"></i>
